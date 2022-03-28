@@ -144,10 +144,12 @@ Fix the error in file `test_mode.py` and then push the changes.
     - had to manually delete directories 
 1. add the ci workflow status badge to README.md by default: [How-to](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
 1. add [coverage badge](https://pypi.org/project/coverage-badge/)! 
-    ```
-    pip install coverage-badge
-    coverage-badge -o coverage.svg
-    ```
+    1. Generate coverage badges for Coverage.py.
+        ```
+        pip install coverage-badge
+        coverage-badge -f -o coverage.svg # force override
+        ```
+    2. Add `![coverage](coverage.svg)` to the top of README.md
 1. pages. It is a paid feature on GitHub. 
     - as a reference, when using gitlab, it is set in [`Python.gitlab-ci.yml`](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml) as follows
     ```
