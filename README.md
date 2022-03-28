@@ -125,6 +125,7 @@ Fix the error in file `test_mode.py` and then push the changes.
 ## Nice to Have
 1. .gitignore and LICENSE should be created by default. [__pycache__](https://stackoverflow.com/questions/16869024/what-is-pycache) failed to be ignored as a result.
     - had to manually delete directories 
+1. add the ci workflow status badge to README.md by default: [How-to](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
 1. pages. It is a paid feature on GitHub. 
 1. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
 1. once readme gets longer, how to add toc
