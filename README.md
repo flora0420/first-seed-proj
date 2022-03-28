@@ -1,4 +1,4 @@
-![example workflow](https://github.com/flora0420/first-seed-proj/actions/workflows/CI/badge.svg)
+![CI](https://github.com/flora0420/first-seed-proj/actions/workflows/ci/badge.svg)
 <!-- ![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg) -->
 
 # first-seed-proj
