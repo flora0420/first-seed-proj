@@ -86,3 +86,10 @@ E       AttributeError: module 'first_seed_proj' has no attribute 'version'
 ```
 
 Fix the error in file `test_mode.py` and then push the changes; 
+
+#### tox
+what should've done before pushing the changes is to run
+```
+tox -e py
+```
+locally and make sure all is clean before pushing changes. 
