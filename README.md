@@ -127,6 +127,20 @@ Fix the error in file `test_mode.py` and then push the changes.
     - had to manually delete directories 
 1. add the ci workflow status badge to README.md by default: [How-to](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
 1. pages. It is a paid feature on GitHub. 
+    - as a reference, when using gitlab, it is set in [`Python.gitlab-ci.yml`](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml) as follows
+    ```
+    pages:
+        script:
+            - pip install sphinx sphinx-rtd-theme
+            - cd doc
+            - make html
+            - mv build/html/ ../public/
+        artifacts:
+            paths:
+            - public
+        rules:
+            - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    ```
 1. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
 1. once readme gets longer, how to add toc
     - [solution](https://github.com/ekalinin/github-markdown-toc)
