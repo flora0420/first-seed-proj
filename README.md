@@ -1,6 +1,4 @@
-![CI](https://github.com/flora0420/first-seed-proj/actions/workflows/ci.yml/badge.svg)
-<!-- ![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg) -->
-![coverage](coverage.svg)
+![CI](https://github.com/flora0420/first-seed-proj/actions/workflows/ci.yml/badge.svg)![coverage](coverage.svg)
 # first-seed-proj
 Demo to create a python package using [python-seed](https://github.com/developmentseed/python-seed) with github CI setup.
 
