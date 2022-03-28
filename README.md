@@ -103,5 +103,6 @@ Fix the error in file `test_mode.py` and then push the changes.
 
 
 ### Nice to Have
+1. .gitignore and LICENSE should be created by default. __pycache__ failed to be ignored as results. 
 1. pages. It is a paid feature on GitHub. 
-2. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
+1. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
