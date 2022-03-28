@@ -44,19 +44,21 @@ tree .
 └── tox.ini
 ```
 ### Repo / GitHub
-Locally ([ref - create repo](https://kbroman.org/github_tutorial/pages/init.html))
+#### Locally ([ref - create repo](https://kbroman.org/github_tutorial/pages/init.html))
 ```
 git init -b main # default branch master yet github/lab switched to main
 git add .        # add files to staging
 git commit -m 'create proj using pyseed' 
 ```
 
-On GitHub
+#### On GitHub
+If you haven't used GitHub since Auguest 31, 2021, make sure to set up the [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) before proceed.
+
 - create a new reprository named `first-seed-proj`
 - add .gitignore using template for python
 - choose a license (e.g., MIT)
 
-Connect it to GitHub
+#### Connect it to GitHub
 ([ref - merge conflict](https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase))
 ```
 git remote add origin https://github.com/flora0420/first-seed-proj.git  
@@ -85,14 +87,18 @@ _________________________________ test_version _________________________________
 E       AttributeError: module 'first_seed_proj' has no attribute 'version'
 ```
 
-Fix the error in file `test_mode.py` and then push the changes; 
+Fix the error in file `test_mode.py` and then push the changes.
 
-#### tox
-what should've done before pushing the changes is to run
-```
-tox -e py
-```
-locally and make sure all is clean before pushing changes. 
+#### Under the hood
+1. [tox](https://tox.wiki/en/latest/index.html): automate and standardize testing in Python
+    ```
+    tox -e py
+    ```
+    locally and make sure all is clean before pushing changes. 
 
-#### pre-commit
-[officical website](https://pre-commit.com)
+2. [pre-commit](https://pre-commit.com)
+
+
+### Nice to Have
+1. pages. It is a paid feature on GitHub. 
+2. apparently, there has been [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html)
