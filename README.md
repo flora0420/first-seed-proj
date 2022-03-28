@@ -182,3 +182,4 @@ Fix the error in file `test_mode.py` and then push the changes.
 
 ## Further Reading
 - [CI/CD by Example in Python](https://towardsdatascience.com/ci-cd-by-example-in-python-46f1533cb09d)
+- [Setting up CI/CD for Python Packages using GitHub Actions](https://www.section.io/engineering-education/setting-up-cicd-for-python-packages-using-github-actions/#authenticating-github-with-test-pypi). Authenticating GitHub with Test PyPI is fun :) 
