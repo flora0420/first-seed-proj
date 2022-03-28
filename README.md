@@ -150,6 +150,11 @@ Fix the error in file `test_mode.py` and then push the changes.
     chmod a+x gh-md-toc
     ../gh-md-toc README.md # then copy and paste the output to readme.
     ```
+1. Profiling with `cProfile` and [`snakeviz`](https://jiffyclub.github.io/snakeviz/)
+    ```
+    python3 -m cProfile -o app.profile first_seed_proj/app.py
+    python3 -m snakeviz app.profile   
+    ```
 
 ## Further Reading
 - [CI/CD by Example in Python](https://towardsdatascience.com/ci-cd-by-example-in-python-46f1533cb09d)
