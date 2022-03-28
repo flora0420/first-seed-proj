@@ -1,6 +1,5 @@
-![CI](https://github.com/flora0420/first-seed-proj/actions/workflows/ci.yml/badge.svg)
-<!-- ![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg) -->
-
+![CI](https://github.com/flora0420/first-seed-proj/actions/workflows/ci.yml/badge.svg) 
+![coverage](coverage.svg)
 # first-seed-proj
 Demo to create a python package using [python-seed](https://github.com/developmentseed/python-seed) with github CI setup.
 
@@ -116,16 +115,35 @@ Fix the error in file `test_mode.py` and then push the changes.
     locally and make sure all is clean before pushing changes. 
     ![tox workflow diagram](https://tox.wiki/en/latest/_images/tox_flow.png)
 2. [pre-commit](https://pre-commit.com)
+    ```
+    pre-commit run --all-files
+    ```
 
-## Lessons Learned
-- features = branches. when trying a new feature, best practice is to work on a new branch named after the feature (or jira ticket id so that you could look it up in the system for more details). there are a few benefits:
+## Note
+- [GitHub] features = branches. when trying a new feature, best practice is to work on a new branch named after the feature (or jira ticket id so that you could look it up in the system for more details). there are a few benefits:
     - avoid crowding the `main` branch while trial-and-erros 
     - streamline the code review with clear commit history 
     - parallel drawn from [merge vs rebase](https://betterprogramming.pub/differences-between-git-merge-and-rebase-and-why-you-should-care-ae41d96237b6)
+
+- [Profiling] Profiling with `cProfile` and [`snakeviz`](https://jiffyclub.github.io/snakeviz/)
+    ```
+    python3 -m cProfile -o app.profile first_seed_proj/app.py
+    python3 -m snakeviz app.profile   
+    ```
+
+- [Pytest DocTests] [Integration](https://doc.pytest.org/en/latest/how-to/doctest.html)
+    - `pytest --doctest-modules`; 
+    - make changes permanent in the project by putting them into a `pytest.ini` or `tox.ini` file [ref](https://stackoverflow.com/questions/17056138/how-to-make-pytest-run-doctests-as-well-as-normal-tests-directory)
+        ```
+        # content of pytest.ini
+        [pytest]
+        addopts = --doctest-modules
+        ```
 ## Nice to Have
 1. .gitignore and LICENSE should be created by default. [__pycache__](https://stackoverflow.com/questions/16869024/what-is-pycache) failed to be ignored as a result.
     - had to manually delete directories 
 1. add the ci workflow status badge to README.md by default: [How-to](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
+1. add [coverage badge](https://pypi.org/project/coverage-badge/)! 
 1. pages. It is a paid feature on GitHub. 
     - as a reference, when using gitlab, it is set in [`Python.gitlab-ci.yml`](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml) as follows
     ```
@@ -150,11 +168,7 @@ Fix the error in file `test_mode.py` and then push the changes.
     chmod a+x gh-md-toc
     ../gh-md-toc README.md # then copy and paste the output to readme.
     ```
-1. Profiling with `cProfile` and [`snakeviz`](https://jiffyclub.github.io/snakeviz/)
-    ```
-    python3 -m cProfile -o app.profile first_seed_proj/app.py
-    python3 -m snakeviz app.profile   
-    ```
+
 
 ## Further Reading
 - [CI/CD by Example in Python](https://towardsdatascience.com/ci-cd-by-example-in-python-46f1533cb09d)
