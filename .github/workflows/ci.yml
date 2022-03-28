@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install tox codecov pre-commit
+          python -m pip install tox codecov pre-commit coverage-badge
 
       # Run tox using the version of Python in `PATH`
       - name: Run Tox
@@ -29,6 +29,10 @@ jobs:
       - name: run pre-commit
         if: matrix.python-version == 3.8
         run: pre-commit run --all-files
+
+      # Run coverage-badge
+      - name: run coverage-badge
+        run: coverage-badge -f -o coverage.svg #force override
 
       - name: Upload Results
         if: success()
