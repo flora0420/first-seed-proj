@@ -101,8 +101,11 @@ Fix the error in file `test_mode.py` and then push the changes.
     ![tox workflow diagram](https://tox.wiki/en/latest/_images/tox_flow.png)
 2. [pre-commit](https://pre-commit.com)
 
-
-### Nice to Have
-1. .gitignore and LICENSE should be created by default. __pycache__ failed to be ignored as results. 
+## Lessons Learned
+- features = branches. when trying a new feature, best practice is to work on a new branch named after the feature (or jira ticket id so that you could look it up in the system for more details). there are a few benefits:
+    - streamline the code review, ignore the trial-and-error commits 
+    - parallel drawn from [merge vs rebase](https://betterprogramming.pub/differences-between-git-merge-and-rebase-and-why-you-should-care-ae41d96237b6)
+## Nice to Have
+1. .gitignore and LICENSE should be created by default. [__pycache__](https://stackoverflow.com/questions/16869024/what-is-pycache) failed to be ignored as results. 
 1. pages. It is a paid feature on GitHub. 
 1. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
