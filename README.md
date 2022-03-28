@@ -4,6 +4,22 @@
 # first-seed-proj
 Demo to create a python package using [python-seed](https://github.com/developmentseed/python-seed) with github CI setup.
 
+Table of Contents
+=================
+
+* [first-seed-proj](#first-seed-proj)
+   * [step by step instructions](#step-by-step-instructions)
+      * [prerequisites](#prerequisites)
+      * [Create the package using python-seed <strong>locally</strong>](#create-the-package-using-python-seed-locally)
+      * [Repo / GitHub](#repo--github)
+         * [Locally (<a href="https://kbroman.org/github_tutorial/pages/init.html" rel="nofollow">ref - create repo</a>)](#locally-ref---create-repo)
+         * [On GitHub](#on-github)
+         * [Connect it to GitHub](#connect-it-to-github)
+      * [CI at work](#ci-at-work)
+         * [Under the hood](#under-the-hood)
+   * [Lessons Learned](#lessons-learned)
+   * [Nice to Have](#nice-to-have)
+
 ## step by step instructions
 ### prerequisites
 You can create an environment, optional but recommended.
@@ -103,9 +119,19 @@ Fix the error in file `test_mode.py` and then push the changes.
 
 ## Lessons Learned
 - features = branches. when trying a new feature, best practice is to work on a new branch named after the feature (or jira ticket id so that you could look it up in the system for more details). there are a few benefits:
-    - streamline the code review, ignore the trial-and-error commits 
+    - avoid crowding the `main` branch while trial-and-erros 
+    - streamline the code review with clear commit history 
     - parallel drawn from [merge vs rebase](https://betterprogramming.pub/differences-between-git-merge-and-rebase-and-why-you-should-care-ae41d96237b6)
 ## Nice to Have
-1. .gitignore and LICENSE should be created by default. [__pycache__](https://stackoverflow.com/questions/16869024/what-is-pycache) failed to be ignored as results. 
+1. .gitignore and LICENSE should be created by default. [__pycache__](https://stackoverflow.com/questions/16869024/what-is-pycache) failed to be ignored as a result.
+    - had to manually delete directories 
 1. pages. It is a paid feature on GitHub. 
 1. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
+1. once readme gets longer, how to add toc
+    - [solution](https://github.com/ekalinin/github-markdown-toc)
+    ```
+    cd ../
+    curl https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc -o gh-md-toc
+    chmod a+x gh-md-toc
+    ../gh-md-toc README.md # then copy and paste the output to readme.
+    ```
