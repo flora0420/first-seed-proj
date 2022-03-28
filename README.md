@@ -79,7 +79,7 @@ Within a minute or two, you shall receive an email from GitHub titled `flora0420
 _________________________________ test_version _________________________________
     def test_version():
         """test version."""
->       assert first_seed_prog.version
-E       AttributeError: module 'first_seed_prog' has no attribute 'version'
+>       assert first_seed_proj.version
+E       AttributeError: module 'first_seed_proj' has no attribute 'version'
 
 Fix the error in file `test_mode.py` and then push the changes; 

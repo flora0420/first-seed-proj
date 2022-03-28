@@ -1,4 +1,4 @@
-"""first_seed_prog.app: Skeleton of a function."""
+"""first_seed_proj.app: Skeleton of a function."""
 
 
 def main(arg_one: str, arg_two: int):

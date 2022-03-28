@@ -1,4 +1,4 @@
-"""first_seed_prog module."""
+"""first_seed_proj module."""
 
 from setuptools import find_packages, setup
 
@@ -16,7 +16,7 @@ extra_reqs = {
 
 
 setup(
-    name="first_seed_prog",
+    name="first_seed_proj",
     version="0.0.1",
     description=u"An Awesome python module",
     long_description=readme,
@@ -40,5 +40,5 @@ setup(
     zip_safe=False,
     install_requires=inst_reqs,
     extras_require=extra_reqs,
-    entry_points={"console_scripts": ["first_seed_prog = first_seed_prog.scripts.cli:first_seed_prog"]},
+    entry_points={"console_scripts": ["first_seed_proj = first_seed_proj.scripts.cli:first_seed_proj"]},
 )

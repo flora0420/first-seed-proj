@@ -1,6 +1,6 @@
-"""Test first_seed_prog functions."""
+"""Test first_seed_proj functions."""
 
-from first_seed_prog import app
+from first_seed_proj import app
 
 
 def test_app():

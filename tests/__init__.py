@@ -1,1 +1,1 @@
-"""first_seed_prog tests suite."""
+"""first_seed_proj tests suite."""
