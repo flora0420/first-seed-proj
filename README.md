@@ -93,3 +93,6 @@ what should've done before pushing the changes is to run
 tox -e py
 ```
 locally and make sure all is clean before pushing changes. 
+
+#### pre-commit
+[officical website](https://pre-commit.com)
