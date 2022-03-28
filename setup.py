@@ -21,7 +21,7 @@ setup(
     description=u"An Awesome python module",
     long_description=readme,
     long_description_content_type="text/markdown",
-    python_requires=">=3.8",
+    python_requires=">=3",
     classifiers=[
         "Intended Audience :: Information Technology",
         "Intended Audience :: Science/Research",
