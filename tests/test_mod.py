@@ -5,4 +5,4 @@ import first_seed_prog
 
 def test_version():
     """test version."""
-    assert first_seed_prog.version
+    assert first_seed_prog.__version__
