@@ -94,7 +94,7 @@ git push
 ```
 
 ### CI at work
-Within a minute or two, you shall receive an email from GitHub titled `flora0420/first-seed-proj] Run failed: CI - main`, click [View Workflow run](https://github.com/flora0420/first-seed-proj/actions/runs/2046791613), and see that the job has failed; specifically:
+Within a minute or two, one shall receive an email from GitHub soon titled `[flora0420/first-seed-proj] Run failed: CI - main`, click [View Workflow run](https://github.com/flora0420/first-seed-proj/actions/runs/2046791613), and see that the job has failed; specifically:
 
 ```
 =================================== FAILURES ===================================
@@ -116,8 +116,12 @@ Fix the error in file `test_mode.py` and then push the changes.
     ![tox workflow diagram](https://tox.wiki/en/latest/_images/tox_flow.png)
 2. [pre-commit](https://pre-commit.com)
     ```
+    arch -x86_64 brew install pre-commit # arch -x86_64 for m1
+    # skip Add a pre-commit configuration as it's created by pyseed
+    pre-commit install
     pre-commit run --all-files
     ```
+    in VS Code, one can hold Command key ⌘ + Click/Tap on the link to the line where fix is needed. 
 
 ## Note
 - [GitHub] features = branches. when trying a new feature, best practice is to work on a new branch named after the feature (or jira ticket id so that you could look it up in the system for more details). there are a few benefits:
