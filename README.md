@@ -1,4 +1,7 @@
-#first-seed-proj
+![example workflow](https://github.com/flora0420/first-seed-proj/actions/workflows/CI/badge.svg)
+<!-- ![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg) -->
+
+# first-seed-proj
 Demo to create a python package using [python-seed](https://github.com/developmentseed/python-seed) with github CI setup.
 
 ## step by step instructions
@@ -95,10 +98,10 @@ Fix the error in file `test_mode.py` and then push the changes.
     tox -e py
     ```
     locally and make sure all is clean before pushing changes. 
-
+    ![tox workflow diagram](https://tox.wiki/en/latest/_images/tox_flow.png)
 2. [pre-commit](https://pre-commit.com)
 
 
 ### Nice to Have
 1. pages. It is a paid feature on GitHub. 
-2. apparently, there has been [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html)
+2. apparently, [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/README.html) is more comphrensive.
