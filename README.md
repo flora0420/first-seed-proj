@@ -17,6 +17,7 @@ pyseed create first-seed-proj --ci github
 cd first-seed-proj
 tree .
 ```
+```
 .
 ├── README.md
 ├── __pycache__
@@ -41,7 +42,7 @@ tree .
 │   ├── test_function.py
 │   └── test_mod.py
 └── tox.ini
-
+```
 ### Repo / GitHub
 Locally ([ref - create repo](https://kbroman.org/github_tutorial/pages/init.html))
 ```
@@ -75,11 +76,13 @@ git push
 ### CI at work
 Within a minute or two, you shall receive an email from GitHub titled `flora0420/first-seed-proj] Run failed: CI - main`, click [View Workflow run](https://github.com/flora0420/first-seed-proj/actions/runs/2046791613), and see that the job has failed; specifically:
 
+```
 =================================== FAILURES ===================================
 _________________________________ test_version _________________________________
     def test_version():
         """test version."""
 >       assert first_seed_proj.version
 E       AttributeError: module 'first_seed_proj' has no attribute 'version'
+```
 
 Fix the error in file `test_mode.py` and then push the changes; 
